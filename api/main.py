@@ -16,11 +16,6 @@ def get_db():
         db.close()
 
 
-@app.get("/")
-def root():
-    return {"Hello": "World"}
-
-
 @app.get("/v1/players/{player_id}", response_model=schemas.Player)
 def read_player(player_id: str, db: Session = Depends(get_db)):
     db_player = crud.get_player(db, player_id=player_id)
