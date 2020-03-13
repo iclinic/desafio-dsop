@@ -13,3 +13,7 @@ def get_player_by_email(db: Session, email: str):
 
 def get_players(db: Session, skip: int = 0, limit: int = 200):
     return db.query(models.Player).offset(skip).limit(limit).all()
+
+
+def get_players_count(db: Session):
+    return db.query(models.Player).count()

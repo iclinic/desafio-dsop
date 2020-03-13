@@ -7,8 +7,8 @@ class Player(Base):
     __tablename__ = "players"
 
     player_id = Column(String, primary_key=True, index=True)
-    player_name = Column(String, unique=True, index=True)
-    email = Column(String, unique=True, index=True)
+    player_name = Column(String, index=True)
+    email = Column(String, index=True)
     country = Column(String)
     last_login = Column(Date)
 
