@@ -19,7 +19,7 @@ def get_db():
 
 @app.get("/", response_class=HTMLResponse)
 async def home():
-    return """
+    html_content = """
     <html>
     <head>
     <titleiClinic - Desafio DSOP</title>
@@ -37,6 +37,8 @@ async def home():
     </body>
     </html>
     """
+
+    return HTMLResponse(content=html_content, status_code=200)
 
 
 @app.get("/v1/players/{player_id}", response_model=schemas.Player)

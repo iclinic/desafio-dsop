@@ -15,8 +15,6 @@
   [certificatesResolvers.myresolver.acme.httpChallenge]
     entryPoint = "web"
 
-  [certificatesResolvers.myresolver.acme.tlsChallenge]
-
   [certificatesResolvers.myresolver.acme.dnsChallenge]
     provider = "cloudflare"
     delayBeforeCheck = 0
