@@ -17,7 +17,7 @@ def get_db():
         db.close()
 
 
-@app.get("/", response_class=HTMLResponse)
+@app.get("/", response_class=HTMLResponse, include_in_schema=False)
 async def home():
     html_content = """
     <html>
@@ -29,8 +29,8 @@ async def home():
     <p>Algu&eacute;m de <em>front-end</em> poderia dar uma m&atilde;ozinha aqui, n&eacute;?</p>
     <h2><br />Links</h2>
     <ul>
-    <li><a href="api.desafio.online/redoc" target="_blank" rel="noopener">Documenta&ccedil;&atilde;o bonita</a></li>
-    <li><a href="api.desafio.online/docs" target="_blank" rel="noopener">Documenta&ccedil;&atilde;o menos bonita</a></li>
+    <li><a href="/redoc" target="_blank" rel="noopener">Documenta&ccedil;&atilde;o bonita</a></li>
+    <li><a href="/docs" target="_blank" rel="noopener">Documenta&ccedil;&atilde;o menos bonita</a></li>
     </ul>
     <h2>Problemas com a API?</h2>
     <p>Me chama no <a href="https://t.me/funny_username">Telegram</a>! Ou manda um e-mail para <strong>gabriel.ricardo@iclinic.com.br</strong></p>
