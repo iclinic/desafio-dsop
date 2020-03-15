@@ -20,7 +20,4 @@ services:
       - db.env
     labels:
       - traefik.http.routers.api.rule=Host(`your.host.com`)
-      - traefik.http.routers.api.tls=true
       - traefik.http.routers.api.tls.certresolver=myresolver
-      - traefik.http.routers.blog.tls.domains[0].main=your.host
-      - traefik.http.routers.blog.tls.domains[0].sans=*.your.host

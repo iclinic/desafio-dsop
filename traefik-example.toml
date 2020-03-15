@@ -12,9 +12,6 @@
   email = "your@email.com"
   storage = "acme.json"
 
-  [certificatesResolvers.myresolver.acme.httpChallenge]
-    entryPoint = "web"
-
   [certificatesResolvers.myresolver.acme.dnsChallenge]
     provider = "cloudflare"
     delayBeforeCheck = 0

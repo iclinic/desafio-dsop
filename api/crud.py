@@ -15,5 +15,15 @@ def get_players(db: Session, skip: int = 0, limit: int = 200):
     return db.query(models.Player).offset(skip).limit(limit).all()
 
 
+def get_players_by_name(db: Session, name: str, skip: int = 0, limit: int = 200):
+    return (
+        db.query(models.Player)
+        .filter(models.Player.player_name.ilike(f"%{name}%"))
+        .offset(skip)
+        .limit(limit)
+        .all()
+    )
+
+
 def get_players_count(db: Session):
     return db.query(models.Player).count()
