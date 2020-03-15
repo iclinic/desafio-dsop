@@ -4,6 +4,7 @@
 #
 #    pip-compile requirements.in
 #
+aiofiles==0.4.0           # via -r requirements.in
 fastapi==0.52.0           # via -r requirements.in
 prettyconf==2.1.0         # via -r requirements.in
 psycopg2==2.8.4           # via -r requirements.in
